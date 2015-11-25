@@ -12,11 +12,23 @@ import java.util.Scanner;
  */
 public class A6Q3 {
 
- public static void factor(double v){
-     double devisable = v;
+    //fix issue with spacing in output
+ public static void factor(int v){
+     int devisable = v;
      
+     while(devisable >0 ){
+    
+         int factored = v % devisable;
+       
+         if(factored == 0){
+             
+             System.out.println(devisable);
+   
+         }
      
-     
+     devisable = devisable -1;
+     System.out.println();
+    }
  }   
     
     
@@ -35,7 +47,7 @@ public class A6Q3 {
         // TODO code application logic here
         System.out.println("plese put in the number you want to factor");
         Scanner input = new  Scanner(System.in);
-    double valueE = input.nextDouble();
+    int valueE = input.nextInt();
         factor(valueE);
     
     }
